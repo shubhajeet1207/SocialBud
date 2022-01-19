@@ -1,15 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
 
 :root {
-  --color-main: #71c6dd;
+  --color-main: #193695;
   --color-main-light: #e1f6fb;
-  --color-dark: #3f4156;
-  --color-dark-medium: #51546e;
-  --color-dark-light: #696d97;
-  --color-light: #e5e5e5;
+  --color-dark: #ffffff;
+  --color-dark-medium: #f4f3f5;
+  --color-dark-light: #26c0ca;
+  --color-light: #193695;
   --color-gray: #8b8b8b;
   --color-light-gray: #b2bdbd;
-  --color-bg: #2d2d39;
+  --color-bg: #f4f3f9;
   --color-success: #5dd693;
   --color-error: #fc4b0b;
 }
@@ -23,7 +23,6 @@
   padding: 0;
   box-sizing: border-box;
   text-rendering: optimizeLegibility;
-  /* color: inherit; */
   font-size: inherit;
 }
 
@@ -58,7 +57,6 @@ img {
 
 a {
   display: inline-block;
-  color: var(--color-main);
   text-decoration: none;
 }
 
@@ -293,6 +291,10 @@ a {
   color: var(--color-light);
 }
 
+.user_name {
+    font-size: 0.8em;
+    text-decoration: none;
+}
 .header__search > label {
   background-color: var(--color-dark-medium);
   padding: 1.3rem 1rem;
@@ -552,10 +554,6 @@ a {
   text-decoration: underline;
 }
 
-/*==============================
-=>  Topics
-================================*/
-
 .topics__header {
   margin-bottom: 2rem;
 }
@@ -615,10 +613,6 @@ a {
   }
 }
 
-/*==============================
-=>  Room List
-================================*/
-
 .roomList__header {
   display: flex;
   justify-content: space-between;
@@ -637,8 +631,6 @@ a {
   font-weight: 500;
   color: var(--color-dark-light);
 }
-
-/*========== Room List Room ==========*/
 
 .roomListRoom {
   margin-bottom: 2.4rem;
@@ -668,7 +660,7 @@ a {
 }
 
 .roomListRoom__actions span {
-  font-size: 1.4rem;
+  font-size: 0.7em;
   font-weight: 500;
 }
 
@@ -687,7 +679,7 @@ a {
   font-size: 2rem;
   font-weight: 500;
   margin-bottom: 1.5rem;
-  color: var(--color-light);
+  color: #3a3c47;
   transition: all 0.3s ease-in-out;
 }
 
@@ -726,10 +718,6 @@ a {
   font-size: 1.3rem;
 }
 
-/*==============================
-=>  Activities
-================================*/
-
 .activities {
   background: var(--color-dark);
   border-radius: 5px;
@@ -741,11 +729,14 @@ a {
   text-transform: uppercase;
   font-weight: 500;
   padding: 1rem 1.5rem;
-  color: var(--color-light);
+  color: #ffffff;
   letter-spacing: 1px;
   font-size: 1.4rem;
 }
 
+.thread__details {
+    color: #575757;
+}
 .activities__box {
   margin: 1.5rem;
   padding: 1.5rem;
@@ -756,6 +747,7 @@ a {
 .activities__boxHeader p {
   font-size: 1.4rem;
   line-height: 1.3;
+  color: #000167;
 }
 
 .activities__boxHeader p span {
@@ -945,7 +937,7 @@ a {
 .participants__top {
   text-transform: uppercase;
   font-weight: 500;
-  color: var(--color-light);
+  color: #fff;
 }
 
 .room__topLeft svg {
@@ -1109,7 +1101,7 @@ a {
 
 .room__message > form > input {
   resize: none;
-  background-color: var(--color-dark-light);
+  background-color: #fff;
   color: var(--color-light);
   border: none;
   outline: none;
