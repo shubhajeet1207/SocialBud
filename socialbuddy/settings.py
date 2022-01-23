@@ -11,6 +11,10 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+import cloudinary_storage
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +29,7 @@ SECRET_KEY = 'django-insecure-3#av2c6nptlbbb6^muqkchu&fe3wv&n$t2+g$v!ir-f5%doocb
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -42,6 +46,7 @@ INSTALLED_APPS = [
 
     'rest_framework',
     "corsheaders",
+    'cloudinary_storage',
 ]
 
 AUTH_USER_MODEL = 'base.User'
@@ -137,6 +142,14 @@ STATICFILES_DIRS = [
 ]
 
 MEDIA_ROOT = BASE_DIR / 'static/images'
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'spymonk-cloud',
+    'API_KEY': '575685413639591',
+    'API_SECRET': 'Kspt3mQs4fSDi9RuYcN_yWCEE-c'
+}
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 # STATIC_ROOT =
 
